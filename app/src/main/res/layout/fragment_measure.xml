@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:spacing="16dp">
+
+        <!-- Light Sensor Gauge -->
+        <com.github.anastr.speedviewlib.SpeedView
+            android:id="@+id/lightGauge"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_marginTop="10dp"
+            android:paddingTop="10dp"
+            app:sv_unit="lux"
+            app:sv_maxSpeed="1000"
+            app:sv_withTremble="false"
+            app:sv_indicator="NormalIndicator"
+
+
+        />
+
+
+        <!-- Sound Sensor Gauge -->
+
+        <TextView
+            android:id="@+id/lightValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Light: -- lux"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <com.github.anastr.speedviewlib.AwesomeSpeedometer
+            android:id="@+id/soundGauge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:sv_unit="dB"
+            app:sv_maxSpeed="90"
+            app:sv_withTremble="false"
+
+            />
+
+        <TextView
+            android:id="@+id/soundValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sound: -- dB"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/btn_viewresults"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="View Results" />
+    </LinearLayout>
+</ScrollView>
